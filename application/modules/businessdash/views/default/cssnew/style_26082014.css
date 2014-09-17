@@ -1,0 +1,95 @@
+
+html, ul, li, h1, h2, h3, h4, h5, h6, a, b, span, img, forum, p { border: medium none; list-style: none outside none; margin: 0; padding: 0; text-decoration: none; }
+
+body { margin:0px; padding:0px; font-family: 'Open Sans', sans-serif; overflow-y:scroll;}
+
+img{background:none !important;}
+
+.header { float:left; width:100%; margin:10px 0px 20px 0px;}
+
+.main_cont {  margin:0 auto; max-width:980px; width:98%; }
+
+.logo { float:left; width:auto;}
+.top_right { float:right; width:40%;}
+.top_right ul {}
+.top_right li { float:left; padding-left:2%; font-size:13px; color:#111111; line-height:24px;}
+.top_right li span { color:#6c99f4;}
+
+.icon2 { float:right;}
+
+
+.services {
+	max-width: 980px;
+	margin: auto;
+	clear: both;
+	overflow: hidden;
+	width: 100%;
+	margin-top: 4%;
+    padding-left: 10px;
+	box-sizing: border-box;
+	border: solid 1px #d8d8d8;
+}
+.services ul {
+	margin: 0px 0px;
+	padding: 0px;
+}
+.services li {
+ border-radius: 2px;
+    float: left;
+    font-size: 17px;
+    list-style: none outside none;
+    margin-bottom: 12px;
+    margin-right: 1.1%;
+    margin-top: 12px;
+    max-height: 152px;
+    min-height: 152px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 23.9%;
+}
+
+.services li a { text-decoration:none; color:#fff;}
+
+.services li span { height:71px; width:100%; float:left; padding:25px 0px 16px 0px; }
+
+.srv1 { background:#147896;} .srv2 { background:#ff7200;}.srv3 { background:#fcc120;}.srv4{ background:#56d9c9;}.srv5{ background:#3ec7f3;}.srv6{ background:#455962;}.srv7{ background:#f0514a;}.srv8{ background:#ff7e00;}.srv9{ background:#ff7200;}.srv10{ background:#fcc120;}.srv11{ background:#56d9c9;}.srv12{ background:#3ec7f3;}
+
+
+
+
+.footer { width:100%; float:left;}
+
+.footer_menu { width:100%; float:left; margin-top:40px;}
+.footer_menu h2 { float:left; width:100%; font-size:18px; text-transform:uppercase; color:#111; font-weight:normal; padding-bottom:10px;}
+.footer_menu ul { width:23%; float:left; margin-right:2%;}
+.footer_menu ul li { width:100%; float:left;}
+.footer_menu ul li a { color:#4b99f2; font-size:14px;}
+
+.copy_right { color:#111; font-size:14px;  width:100%; float:left;  margin-top:40px; margin-bottom:20px;}
+.copy_right span {color:#4b99f2;}
+
+
+@media (max-width: 800px) {
+	
+	.services li { width:31%;}
+	
+	
+	
+	}
+	
+	
+	
+@media (max-width: 600px){
+
+.services li { width:48%;}
+	
+	}	
+
+@media (max-width: 420px){
+
+.services li { width:98%;}
+	
+	}
+
+
+

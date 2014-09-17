@@ -1,0 +1,20 @@
+<input ng-file-select="fileSelect($files)" ng-hide=true 
+	   file-dialog="fileDialog" id="frm-img" type="file" accept="image/*;capture=camera">
+<div ng-if="!carousel" class="img-list">
+	<div class="image-container" ng-click="setSlider(id)" ng-repeat="(id, photo) in photos">
+		<img ng-src="{{photo.media.mediafile.thumbs.middle}}" alt="">
+	</div>
+</div>
+<div ng-show="carousel">
+	<ul id="slider" rn-carousel="true" rn-carousel-index="slideIndex" rn-carousel-control="true">
+		<li class="col-xs-12" ng-repeat="photo in photos"
+			ng-if="photo.media.mediafile.thumbs.grand"
+			ng-style="{'background-image': 'url(' + photo.media.mediafile.thumbs.grand + ')'}">
+			<div class="col-xs-12 row descr">
+				<time class="pull-right"><span ng-bind="photo.date_add"></span></time>
+				<div class="photo-description" ng-bind="photo.description"></div>
+				<span ng-bind="user.nickname"></span>
+			</div>
+		</li>
+	</ul>
+</div>

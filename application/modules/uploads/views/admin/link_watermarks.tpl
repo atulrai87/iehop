@@ -1,0 +1,1 @@
+<a href="{$site_url}admin/uploads/watermarks/">{l i='link_8' gid='admin_home_page'}</a>

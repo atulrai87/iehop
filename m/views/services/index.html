@@ -1,0 +1,9 @@
+<div class="inter">
+	<b><span ng-bind="l('services_your_account')"></span> (<span ng-bind="user.account|cur"></span>)</b>
+</div>
+<ul ng-if="apd.data.siteUrl" class="nav nav-pills nav-stacked">
+	<li ng-click="go(apd.data.siteUrl)">
+		<span ng-bind="l('services_add_money')"></span><i class="fa fa-angle-right"></i>
+	</li>
+</ul>
+<div app-view-segment="1"></div>

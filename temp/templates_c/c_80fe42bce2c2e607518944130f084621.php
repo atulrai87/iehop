@@ -1,0 +1,7 @@
+<?php /* V2.10 Template Lite 4 January 2007  (c) 2005-2007 Mark Dickenson. All rights reserved. Released LGPL. 2014-09-05 05:47:37 CDT */ ?>
+
+<div class="tabs tab-size-15 noPrint">
+	<ul>
+		<li<?php if ($this->_vars['profile_section'] == 'wall'): ?> class="active"<?php endif; ?>><a data-pjax-no-scroll="1" href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['seodata']), $this);?>/wall/"><?php echo l('filter_section_wall', 'users', '', 'text', array()); ?></a></li>		<li<?php if ($this->_vars['profile_section'] == 'profile'): ?> class="active"<?php endif; ?>><a data-pjax-no-scroll="1" href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['seodata']), $this);?>/profile/"><?php echo l('filter_section_profile', 'users', '', 'text', array()); ?></a></li>
+		<li<?php if ($this->_vars['profile_section'] == 'gallery'): ?> class="active"<?php endif; ?>><a data-pjax-no-scroll="1" href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['seodata']), $this);?>/gallery/"><?php echo l('filter_section_gallery', 'users', '', 'text', array()); ?></a></li>				<li<?php if ($this->_vars['profile_section'] == 'map_view'): ?> class="active"<?php endif; ?>><a data-pjax-no-scroll="1" href="<?php echo tpl_function_seolink(array('module' => 'users','method' => 'view','data' => $this->_vars['seodata']), $this);?>/map_view/"><?php echo l('filter_section_map', 'users', '', 'text', array()); ?></a></li>	</ul>
+</div>

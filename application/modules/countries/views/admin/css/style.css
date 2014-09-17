@@ -1,0 +1,6 @@
+.bar-level1{background: #efefef; min-height: 20px}
+.bar-level1 .bar{float: left; width:0%; overflow: hidden; background: #FF9933; color: #ffffff; text-align: right;  font-size: 15px; line-height: 20px}
+
+.region-block{float: left; width: 25%; overflow: hidden}
+.region-block span{color: #cccccc; font-style: italic}
+.region-block span.installed{color: #555555; font-style: normal}

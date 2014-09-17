@@ -1,0 +1,11 @@
+.event_left{float:left;width:30%;overflow:hidden;}
+.event_right{float:right;width:70%}
+.view_events{width:100%;margin-top:2%;}
+.body{text-align:center;}
+.left{float:left;}
+.right{float:right;}
+.resetButton{margin-left:100px;}
+.new_event_form tr{height: 35px;}
+.new_event_form tr td{min-width:100px}
+/*.new_event_form  select{width="200px";}
+.new_event_form input{width="200px";}*/

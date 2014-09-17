@@ -1,0 +1,1 @@
+<a href="{$site_url}admin/ausers">{l i='link_1' gid='admin_home_page'}</a>

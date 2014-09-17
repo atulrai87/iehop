@@ -1,0 +1,4 @@
+table.data tr:hover td{background: parent}
+table.data tr th{text-align: left}
+.left-side{float: left; width: 49%}
+.right-side{float: right; width: 49%}

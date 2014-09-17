@@ -1,0 +1,73 @@
+#Order Deny,Allow
+#Deny from all
+#Allow from 192.185.1.20
+ AddDefaultCharset utf-8 
+
+RedirectMatch (.*)/backup/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/flash_chat/appdata/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/flash_chat/bot/programe/aiml/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/flash_chat/images/cust_img/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/flash_chat/inc/patServer/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/flash_chat/templates/cache/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/flash_chat/templates/templates_c/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/flash_chat/uploaddir/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/languages/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/templates_c/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/uploads/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/admin/newsletter/files/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/admin/newsletter/pictures/(.*).php$ $1/error.php?code=404
+RedirectMatch (.*)/include/(.*).xml$ $1/error.php?code=404
+
+
+
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} !^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [R=301,L]
+
+Options +FollowSymlinks
+
+RewriteRule ^download\/(.*)$ getfile.php?fname=$1 [L]
+
+RewriteRule ^(admin\/newsletter.*)$ - [L]
+
+RewriteRule ^user/([^/\.]+)/?$ viewprofile.php?login=$1 [L,QSA]
+
+#RewriteRule ^en/user/([^/\.]+)/?$ en/viewprofile.php?login=$1 [L,QSA]
+
+#RewriteRule ^([^/\.]+)\/news\.php([^/\.]*)$ news.php?$2&lang_code=$1 [L,QSA]
+
+RewriteRule ^([^m/\.]+)\/news\/page-([\d]+)\.html news.php?lang_code=$1&page=$2 [L,QSA]
+RewriteRule ^([^m/\.]+)\/news\/([^/\.]+)\.html$ news.php?sel=single&lang_code=$1&seo_link=$2 [L,QSA]
+RewriteRule ^([^m/\.]+)\/news\/([^/\.]+)\/([^/\.]+)\.html$ news.php?sel=single&lang_code=$1&news_id=$3 [L,QSA]
+RewriteRule ^([^m/\.]+)\/news\/$ news.php?lang_code=$1 [L,QSA]
+RewriteRule ^([^m/\.]+)\/news\/\.html$ news.php?lang_code=$1 [L,QSA]
+RewriteRule ^([^m/\.]+)\/news news.php?lang_code=$1 [L,QSA]
+
+RewriteRule ^.+\/([\d]+)-blog-.*$ blog.php?sel=view_user&id_blog=$1 [L,QSA] 
+RewriteRule ^.+\/blogs\/([\d]+)-category-.*$ blog.php?sel=list_category&id_category=$1 [L,QSA] 
+RewriteRule ^.+\/tag\/(.*)$ quick_search.php?sel=search_tag&tag=$1 [L,QSA] 
+
+
+#RewriteRule ^templates/pilot_3_theme/js/(.*\.js) combine.php?type=javascript&files=$1
+#RewriteRule ^templates/pilot_3_theme/css/(.*\.css) combine.php?type=css&files=$1
+
+RewriteRule ^(toksta_controller\.html)$ - [L]
+RewriteRule ^([^/]+).html$ marketing.php?sel=$1.html [L,QSA]
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteCond %{REQUEST_URI} !^(/index\.php|/img|/js|/css|/robots\.txt|/favicon\.ico)
+RewriteRule ^(.*)$ route.php?/$1 [L]
+
+RewriteCond %{HTTP_HOST} ^iehop.com
+RewriteRule (.*) http://www.iehop.com/$1 [R=301,L]
+
+<IfModule mod_suphp.c>
+ suPHP_ConfigPath /home/iehop
+ <Files php.ini>
+   order allow,deny
+   deny from all
+ </Files>
+</IfModule>

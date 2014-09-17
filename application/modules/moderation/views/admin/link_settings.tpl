@@ -1,0 +1,1 @@
+<a href="{$site_url}admin/moderation/settings/">{l i='link_7' gid='admin_home_page'}</a>
